@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌋 男孩們的夏威夷探險手冊</title>
+    <style>
+        :root {
+            --main: #b45309;
+            --main-dark: #78350f;
+            --ocean: #0e7490;
+            --bg: #fffbeb;
+            --card: #ffffff;
+            --text: #374151;
+            --muted: #6b7280;
+            --line: #fde68a;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.85;
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .container { max-width: 860px; margin: auto; padding: 0 16px 60px; }
+
+        header {
+            background: linear-gradient(135deg, #0e7490 0%, #155e75 55%, #78350f 100%);
+            color: #fff;
+            padding: 2.4rem 1rem;
+            text-align: center;
+        }
+        header h1 { margin: 0; font-size: 1.9rem; }
+        header p { margin: .6rem 0 0; opacity: .92; }
+
+        h2 {
+            color: var(--main-dark);
+            border-bottom: 3px solid var(--line);
+            padding-bottom: 8px;
+            margin-top: 44px;
+            font-size: 1.4rem;
+        }
+        h3 { color: var(--ocean); margin: 20px 0 8px; font-size: 1.12rem; }
+        a { color: var(--ocean); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .card {
+            background: var(--card);
+            margin: 18px 0;
+            padding: 22px;
+            border-radius: 14px;
+            box-shadow: 0 1px 8px rgba(120, 53, 15, .08);
+        }
+
+        .timeline { list-style: none; padding: 0; margin: 0; }
+        .timeline li {
+            position: relative;
+            padding: 0 0 18px 34px;
+            border-left: 3px solid var(--line);
+            margin-left: 10px;
+        }
+        .timeline li:last-child { border-left-color: transparent; }
+        .timeline li::before {
+            content: '●';
+            color: var(--main);
+            position: absolute;
+            left: -11px; top: 0;
+            background: var(--bg);
+            font-size: 1.05rem;
+        }
+        .timeline b.year { color: var(--main-dark); display: block; font-size: 1.02rem; }
+
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: .95rem; }
+        th, td { border-bottom: 1px solid #f3e8c8; padding: 8px 10px; text-align: left; vertical-align: top; }
+        th { background: #fef3c7; color: var(--main-dark); white-space: nowrap; }
+        .table-wrap { overflow-x: auto; }
+
+        .funfact {
+            background: #ecfeff;
+            border-left: 4px solid var(--ocean);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: .93rem;
+            margin: 12px 0;
+        }
+        .funfact::before { content: '🤯 酷知識：'; font-weight: 700; color: var(--ocean); }
+
+        .say {
+            display: inline-block;
+            background: #fef3c7;
+            border: 1px dashed #f59e0b;
+            border-radius: 8px;
+            padding: 2px 10px;
+            margin: 2px 4px 2px 0;
+            font-size: .93rem;
+            white-space: nowrap;
+        }
+
+        ul.mission { list-style: none; padding: 0; }
+        ul.mission li { margin: 10px 0; padding-left: 2px; }
+        ul.mission input { transform: scale(1.3); margin-right: 10px; accent-color: var(--main); }
+
+        details.quiz {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            margin: 10px 0;
+            background: #fffdf5;
+        }
+        details.quiz summary { cursor: pointer; padding: 10px 14px; font-weight: 600; color: var(--main-dark); }
+        details.quiz div { padding: 0 16px 12px; }
+
+        .spot-tag {
+            display: inline-block;
+            font-size: .78rem;
+            background: #ecfdf5;
+            border: 1px solid #6ee7b7;
+            color: #065f46;
+            border-radius: 999px;
+            padding: 1px 10px;
+            margin-left: 6px;
+            white-space: nowrap;
+        }
+
+        footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 30px 16px; }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.4rem; }
+            .card { padding: 16px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🌋 男孩們的夏威夷探險手冊</h1>
+        <p>Sean ＆ Sky 專用・2026 夏天歐胡島任務簡報｜配合<a href="trip.html" style="color:#fde68a">家庭行程表</a>使用</p>
+    </header>
+
+    <div class="container">
+
+        <!-- ═══════════ 認識夏威夷 ═══════════ -->
+        <h2>🌍 任務簡報：你要去的是什麼地方？</h2>
+        <div class="card">
+            <p>夏威夷是<b>地球上最偏遠的群島</b>——離最近的大陸超過 3,800 公里，比台灣到北海道還遠得多。它不是「一個島」，而是由 137 個島嶼組成的鏈條，橫跨 2,400 公里；你們要去的<b>歐胡島（Oʻahu）</b>是第三大島，全州七成的人都住在這裡，首府檀香山（Honolulu）就在島的南岸。</p>
+            <p>這些島全部是<b>火山</b>從 5,000 公尺深的海底一路噴出來的！太平洋板塊像輸送帶一樣緩緩滑過一個固定的「熱點」，岩漿一次次衝破海面，就串出了一整條島鏈。你們爬的鑽石頭山、浮潛的恐龍灣，全都是火山口。</p>
+            <div class="funfact">夏威夷群島到現在還在「長大」——大島東南方的海底有一座叫 Kamaʻehuakanaloa 的海底火山正在噴發，再過幾萬年就會冒出海面變成新的島！</div>
+        </div>
+
+        <!-- ═══════════ 歷史時間軸 ═══════════ -->
+        <h2>🛶 夏威夷大歷史：8 個關鍵時刻</h2>
+        <div class="card">
+            <ul class="timeline">
+                <li><b class="year">約 1,000 年前｜世界最強航海家來了</b>
+                玻里尼西亞人駕著雙體獨木舟，<b>沒有指南針、沒有地圖</b>，只靠星星、洋流、海浪的形狀和海鳥的飛行方向，橫渡幾千公里的太平洋找到夏威夷——這套技術叫「尋路術（wayfinding）」，被認為是人類史上最偉大的航海成就之一。他們帶來了豬、芋頭、椰子，建立了聚落。</li>
+                <li><b class="year">1778｜庫克船長「發現」夏威夷</b>
+                英國探險家庫克船長是第一個抵達的歐洲人，他把這裡命名為「三明治群島」（真的是用三明治伯爵的名字！）。歐洲人帶來了金屬、槍砲——也帶來了疾病。</li>
+                <li><b class="year">1795｜卡美哈美哈大帝統一群島</b>
+                大島酋長<b>卡美哈美哈一世（Kamehameha I）</b>用西方火砲加上傳統戰術南征北討。決定性一戰就發生在歐胡島的 Nuʻuanu 山谷——他把敵軍一路逼上懸崖。1810 年，夏威夷王國正式誕生，是<b>貨真價實有國王、王宮、國旗的王國</b>。</li>
+                <li><b class="year">1800 年代｜甘蔗、鳳梨與移民潮</b>
+                美國商人來種甘蔗和鳳梨，缺工人，於是從中國、日本、菲律賓、葡萄牙、韓國招募了幾十萬移民——這就是為什麼今天的夏威夷有 spam musubi 飯糰、有日文招牌、有各種亞洲面孔，是全美國文化最混血的州。你們吃的 malasada 甜甜圈就是葡萄牙移民帶來的！</li>
+                <li><b class="year">1893｜王國被推翻 😢</b>
+                美國商人集團在美軍陸戰隊支持下發動政變，軟禁了末代女王<b>利留卡拉尼（Liliʻuokalani）</b>。女王為了避免人民流血，選擇讓步。她被關在自己的王宮裡時寫下多首歌曲，其中〈Aloha ʻOe〉（珍重再見）到今天全世界都會唱。1898 年夏威夷被美國併吞。</li>
+                <li><b class="year">1941.12.7｜珍珠港事件</b>
+                日軍偷襲歐胡島的珍珠港海軍基地，2,400 多人陣亡，美國隔天對日宣戰、正式加入二次世界大戰。沉在港底的亞利桑那號戰艦到今天還每天滲出一滴滴燃油，人們叫它「黑色的眼淚」。</li>
+                <li><b class="year">1959｜成為美國第 50 州</b>
+                夏威夷是美國最年輕的州——所以美國國旗上第 50 顆星就是它。</li>
+                <li><b class="year">1976–現在｜文化大復興</b>
+                夏威夷語一度差點消失（學校曾禁止說）。1976 年，復刻古代雙體舟的「Hōkūleʻa 號」不用任何儀器、純靠星象導航成功航到大溪地，證明了祖先的偉大，點燃全夏威夷的文化復興——語言、草裙舞、傳統航海全部復活。Hōkūleʻa 號後來還環航了整個地球。</li>
+            </ul>
+        </div>
+
+        <!-- ═══════════ 文化課 ═══════════ -->
+        <h2>🌺 文化解碼：看懂夏威夷的 6 個關鍵字</h2>
+        <div class="card">
+            <h3>1. Aloha 不只是「哈囉」</h3>
+            <p>Aloha 同時是你好、再見、我愛你——字面意思是「呼吸的分享」（alo＝面對面，hā＝呼吸）。古夏威夷人見面時額頭鼻尖相碰、交換一口氣。對當地人來說 Aloha 是一種生活態度：對人友善、對土地感恩。店員跟你說 Aloha 時，回一句 Aloha 會得到大大的笑容。</p>
+            <h3>2. 草裙舞（Hula）是「用身體寫的歷史書」</h3>
+            <p>古夏威夷<b>沒有文字</b>，所有歷史、神話、族譜都靠歌謠（mele）和 hula 的動作傳承——每個手勢都有意思：手掌波浪＝海洋，雙手上舉＝山，手指開合＝雨。所以看 hula 不是看「表演」，是在看一部活的史書。7/11 晚上在 Kuhio Beach 看的免費 hula 秀，開場會吹海螺（pū）、點火炬，那是古代召集儀式的遺風。</p>
+            <h3>3. 衝浪是夏威夷發明的，之王叫 Duke</h3>
+            <p>衝浪（heʻe nalu，「滑浪」）是古夏威夷酋長的運動，浪板一度長達 5 公尺。<b>Duke Kahanamoku</b>——你們飯店前面那尊張開雙臂的銅像——是奧運游泳三金得主，一百年前把衝浪帶向全世界，被尊稱「現代衝浪之父」。你們學衝浪的 Waikiki，正是他長大的海灘。跟銅像合照時比一個 <b>Shaka 手勢</b> 🤙（拇指小指伸出、中間三指握起，意思是「放輕鬆／讚」）。</p>
+            <h3>4. 海龜（Honu）是守護神</h3>
+            <p>綠蠵龜在夏威夷文化中是 ʻaumakua——祖先化身的守護神，傳說中曾有海龜 Kauila 化成人形保護孩子。所以看到海龜要保持 3 公尺距離、絕對不能摸：對當地人來說那不只是法律，是對神明的尊重。</p>
+            <h3>5. Ahupuaʻa：一千年前的「永續發展」</h3>
+            <p>古夏威夷人把土地劃成一塊塊從<b>山頂延伸到海邊</b>的楔形領地叫 ahupuaʻa——山上種芋頭、山腰住人、海邊養魚，雨水從山流到海把整條生態串起來，每個 ahupuaʻa 都能自給自足。你們去的 Waimea Valley 就是保存最完整的一個。</p>
+            <h3>6. Kapu：神聖禁忌</h3>
+            <p>古代社會由「kapu（禁忌）」制度管理——某些魚只有酋長能吃、女人不能和男人同桌吃飯，違反者處罰極重。1819 年卡美哈美哈二世公開和母親同桌吃飯，親手打破 kapu 制度。今天「KAPU」這個字還印在夏威夷的「禁止進入」告示牌上！</p>
+        </div>
+
+        <h2>🗣 夏威夷語速成班</h2>
+        <div class="card">
+            <p>夏威夷語只有 <b>13 個字母</b>（5 個母音＋8 個子音），是世界上字母最少的語言之一。母音很多所以每個字聽起來都圓圓的。學會這些，旅途中用得到：</p>
+            <div class="table-wrap">
+            <table>
+                <tr><th>夏威夷語</th><th>唸法</th><th>意思</th></tr>
+                <tr><td class="say">Aloha</td><td>阿囉哈</td><td>你好／再見／愛</td></tr>
+                <tr><td class="say">Mahalo</td><td>馬哈囉</td><td>謝謝（垃圾桶上寫 Mahalo 是「謝謝你丟垃圾」，不是「垃圾」的意思！）</td></tr>
+                <tr><td class="say">ʻOhana</td><td>歐哈那</td><td>家人（《星際寶貝》名言：Ohana 就是家人，家人永遠不會拋下彼此）</td></tr>
+                <tr><td class="say">Keiki</td><td>凱基</td><td>小孩（菜單上的 Keiki Menu＝兒童餐）</td></tr>
+                <tr><td class="say">ʻOno</td><td>歐諾</td><td>好吃！（吃到讚的就說 ʻOno!）</td></tr>
+                <tr><td class="say">Honu</td><td>侯努</td><td>綠蠵龜</td></tr>
+                <tr><td class="say">Mauka / Makai</td><td>毛卡／馬凱</td><td>往山邊／往海邊（當地人報路不說東西南北，說 mauka 或 makai！）</td></tr>
+                <tr><td class="say">Pau</td><td>拋</td><td>結束了、完成了</td></tr>
+                <tr><td class="say">Shaka 🤙</td><td>夏卡</td><td>手勢：讚／放輕鬆／謝啦（開車被禮讓時比這個）</td></tr>
+            </table>
+            </div>
+            <div class="funfact">終極挑戰——夏威夷州魚的名字：<b>humuhumunukunukuāpuaʻa</b>（唸：呼木呼木-努苦努苦-阿-噗阿-阿），意思是「鼻子像豬的鱗魨」。在恐龍灣找到牠本人＋唸出全名＝雙重成就達成！</div>
+        </div>
+
+        <!-- ═══════════ 景點小百科 ═══════════ -->
+        <h2>📍 你們會去的地方：行前情報</h2>
+        <div class="card">
+            <h3>⛰ 鑽石頭山 Diamond Head <span class="spot-tag">7/8 爬</span></h3>
+            <p>30 萬年前一次爆炸噴發形成的火山口，夏威夷名字叫 <b>Lēʻahi</b>（鮪魚的額頭，因為稜線的形狀）。19 世紀英國水手看到坡上閃亮的方解石結晶，以為挖到鑽石而狂喜——結果一顆鑽石都沒有，名字卻留下來了。1908 年美軍在火山口裡蓋了砲台要塞，你們爬的階梯、隧道和山頂的碉堡全是百年前的軍事工事。山頂 360° 俯瞰整個 Waikiki。</p>
+            <h3>🐠 恐龍灣 Hanauma Bay <span class="spot-tag">7/12 浮潛主場</span></h3>
+            <p>3.2 萬年前的火山口被海浪打穿一側、灌進海水，變成一個天然的魚類保護區。1967 年成為夏威夷第一個海洋保護區之前，這裡曾經因為遊客太多、餵魚餵到生態崩壞——現在每天限量入場、進場前人人都要看保育影片，珊瑚和魚群才恢復生機。<b>你們的任務</b>：找到州魚 humuhumu、數數看能認出幾種魚（這裡有 400 多種，四分之一全世界只有夏威夷有）。</p>
+            <h3>🌊 北岸 North Shore <span class="spot-tag">7/11 全日</span></h3>
+            <p>冬天這裡的浪高達 <b>9 公尺</b>（三層樓高！），是世界衝浪錦標賽的聖地——Pipeline、Sunset Beach 都是傳奇浪點；但夏天海面平得像游泳池，才輪到你們浮潛。<b>Waimea Valley</b> 是保存最完整的神聖山谷（ahupuaʻa），祭司住了近千年，走到底可以在 45 呎瀑布下游泳。<b>Shark's Cove</b> 名字來自礁岩形狀、不是真的有鯊魚，放心跳。<b>Haleiwa</b> 是百年前的甘蔗小鎮，Matsumoto 剉冰從 1951 年賣到現在。</p>
+            <h3>🍍 Dole 鳳梨園 <span class="spot-tag">7/10</span></h3>
+            <p>一百多年前 James Dole 把鳳梨變成夏威夷的黃金產業，最盛期全世界 7 成的鳳梨罐頭來自這裡，也因此招來了改變夏威夷人口版圖的亞洲移民潮。園裡有金氏世界紀錄「全球最大植物迷宮」——兄弟對決，計時開始。冷知識：鳳梨其實原產南美洲，不是夏威夷土產！</p>
+            <h3>💡 Makapuʻu 燈塔 <span class="spot-tag">7/12 下午</span></h3>
+            <p>歐胡島最東端的懸崖，1909 年的紅頂燈塔用的是超巨大的特級透鏡，一百多年來還是原裝的。步道望出去的兩座小島：大的叫 Manana（兔子島——以前真的有人在上面養兔子），現在是海鳥保護區。</p>
+            <h3>🌴 Manoa 瀑布 <span class="spot-tag">7/13 備案</span></h3>
+            <p>《侏羅紀公園》和《LOST 檔案》的取景地。這條山谷一年下雨超過 4,000 毫米，所以長成了遮天蔽日的雨林和竹海。走進去請自行腦補恐龍音效。</p>
+            <h3>🏛 Bishop 博物館 <span class="spot-tag">7/14</span></h3>
+            <p>為紀念卡美哈美哈王室最後的公主 Pauahi 而建，收藏全世界最多的玻里尼西亞文物：國王只有用<b>幾十萬根鳥羽毛</b>編成的黃金披風（一根羽毛都要好幾隻鳥身上採、鳥採完還會放走）、巨大的抹香鯨骨架。科學中心有會流「熔岩」的火山演示——親眼看看你腳下這些島是怎麼做出來的。</p>
+            <h3>🗿 Duke 雕像＆Waikiki <span class="spot-tag">天天路過</span></h3>
+            <p>Waikiki 意思是「噴湧的淡水」，以前是王室專屬的度假濕地，國王們就在這裡衝浪。海灘上的 Duke Kahanamoku 銅像每天都掛滿遊客獻的花環（lei）——獻 lei 是夏威夷表達敬意與愛的方式，摘下丟掉 lei 則被視為丟掉那份心意。</p>
+        </div>
+
+        <!-- ═══════════ 生態守則 ═══════════ -->
+        <h2>🐢 小小保育員守則</h2>
+        <div class="card">
+            <ul>
+                <li><b>防曬乳要用 reef-safe</b>：夏威夷州法律禁用含 oxybenzone 的防曬乳——一滴就能讓珊瑚白化死亡。這是全世界第一個為珊瑚立的防曬法。</li>
+                <li><b>珊瑚不能踩、不能摸</b>：看起來像石頭，其實是幾百年才長成的活動物；踩一腳＝毀掉幾十年的生長。浮潛時腳不落地。</li>
+                <li><b>海龜與海豹保持 3 公尺</b>：騷擾牠們最高可罰上萬美元。用眼睛看、用相機拍。</li>
+                <li><b>魚不能餵</b>：餵食會讓魚忘記吃藻類，珊瑚礁反而長滿雜藻死掉——恐龍灣就是修復了幾十年才恢復的。</li>
+                <li><b>沙子、石頭、珊瑚不能帶回家</b>：違法之外，傳說帶走火山女神 Pele 的東西會招來厄運——每年都有遊客把石頭寄回夏威夷附上道歉信，是真的。</li>
+            </ul>
+        </div>
+
+        <!-- ═══════════ 任務清單 ═══════════ -->
+        <h2>✅ 探險任務清單（全部達成＝夏威夷榮譽探險家）</h2>
+        <div class="card">
+            <ul class="mission">
+                <li><label><input type="checkbox"> 在恐龍灣找到州魚 humuhumunukunukuāpuaʻa，並大聲唸出全名</label></li>
+                <li><label><input type="checkbox"> 浮潛時遇到野生海龜（honu），保持 3 公尺完成觀察</label></li>
+                <li><label><input type="checkbox"> 在 Waimea 瀑布下游泳</label></li>
+                <li><label><input type="checkbox"> 爬完鑽石頭山＋Makapuʻu 兩條步道</label></li>
+                <li><label><input type="checkbox"> 在 Duke 雕像前比 Shaka 🤙 合照</label></li>
+                <li><label><input type="checkbox"> 對店員說一次 Mahalo、說一次 ʻOno!</label></li>
+                <li><label><input type="checkbox"> 學會用 mauka（山邊）／makai（海邊）指方向</label></li>
+                <li><label><input type="checkbox"> Dole 迷宮兄弟對決（輸的請吃 Dole Whip）</label></li>
+                <li><label><input type="checkbox"> 吃齊四大名物：poke 生魚飯、malasada 甜甜圈、彩虹剉冰、Dole Whip</label></li>
+                <li><label><input type="checkbox"> 看完 Kuhio Beach 草裙舞秀，說出一個手勢代表的意思</label></li>
+                <li><label><input type="checkbox"> 週五晚上看飯店煙火 🎆</label></li>
+                <li><label><input type="checkbox"> 在 Bishop 博物館找到羽毛披風，猜猜用了幾根羽毛</label></li>
+            </ul>
+        </div>
+
+        <!-- ═══════════ 快問快答 ═══════════ -->
+        <h2>🧠 出發前快問快答（先猜再點開答案）</h2>
+        <div class="card">
+            <details class="quiz"><summary>Q1：夏威夷群島是怎麼形成的？</summary><div>海底火山！太平洋板塊滑過一個固定的岩漿熱點，一次次噴發串出整條島鏈——而且現在還在長新的島。</div></details>
+            <details class="quiz"><summary>Q2：古玻里尼西亞人沒有指南針，靠什麼橫渡太平洋？</summary><div>星星的位置、洋流與海浪的形狀、海鳥飛行的方向——這套「尋路術」1976 年被 Hōkūleʻa 號證明真的可行。</div></details>
+            <details class="quiz"><summary>Q3：統一夏威夷的國王叫什麼名字？</summary><div>卡美哈美哈一世（Kamehameha I），1810 年建立夏威夷王國。神奇寶貝的卡美哈美哈龜派氣功……不對，那是七龍珠。</div></details>
+            <details class="quiz"><summary>Q4：夏威夷的末代君主是誰？發生了什麼事？</summary><div>利留卡拉尼女王（Liliʻuokalani）。1893 年被美國商人集團推翻，她為避免人民流血選擇讓步，被軟禁時寫下名曲〈Aloha ʻOe〉。</div></details>
+            <details class="quiz"><summary>Q5：鑽石頭山上真的有鑽石嗎？</summary><div>沒有！英國水手把閃亮的方解石結晶誤認成鑽石，空歡喜一場，但名字流傳至今。夏威夷名 Lēʻahi＝鮪魚的額頭。</div></details>
+            <details class="quiz"><summary>Q6：為什麼夏威夷有這麼多日式、亞洲食物？</summary><div>1800 年代甘蔗園與鳳梨園從日本、中國、菲律賓、葡萄牙等地招募了幾十萬移民，各自帶來家鄉菜——spam musubi、malasada 都是移民的遺產。</div></details>
+            <details class="quiz"><summary>Q7：草裙舞的手勢是在做什麼？</summary><div>說故事！古夏威夷沒有文字，歷史神話全靠歌謠和舞蹈動作傳承：波浪手勢＝海、上舉＝山、手指開合＝雨。</div></details>
+            <details class="quiz"><summary>Q8：Shark's Cove 有鯊魚嗎？</summary><div>沒有比別處多——名字來自礁岩從上空看的形狀。夏天風平浪靜，是天然水族箱。</div></details>
+            <details class="quiz"><summary>Q9：為什麼不能摸海龜？</summary><div>牠是受保護動物＋夏威夷文化中的守護神 ʻaumakua；騷擾最高罰上萬美元，保持 3 公尺。</div></details>
+            <details class="quiz"><summary>Q10：美國國旗上哪一顆星是夏威夷？</summary><div>第 50 顆——1959 年加入，是美國最年輕的州，也是唯一曾經是「王國」的州。</div></details>
+        </div>
+
+        <footer>
+            📖 配合 <a href="trip.html">家庭行程表</a> 使用｜資料整理於 2026-07-06｜Mahalo &amp; Aloha! 🤙
+        </footer>
+    </div>
+</body>
+
+</html>
